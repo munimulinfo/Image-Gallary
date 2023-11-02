@@ -28,7 +28,7 @@ import image11 from "../../public/images/image-11.jpeg";
 import addImage from "../../public/images/add-photo.png";
 import SortableItem from "./SortableItem";
 import Item from "../Components/Item/Item";
-import { Button, Card, Checkbox } from "@nextui-org/react";
+import { Button, Checkbox } from "@nextui-org/react";
 
 const App = () => {
   const images = [
@@ -82,7 +82,7 @@ const App = () => {
   }, []);
   return (
     <div className="max-w-6xl mx-auto bg-[#fafafa]">
-      <Card className="p-4 md:p-8 mx-4 md:mx-0 my-8">
+      <div className="p-4 md:p-8 mx-4 main-shadow md:mx-0 my-8">
         <div className="flex justify-between mb-3">
           {deletedImg.length === 0 ? (
             <h3 className="text-2xl text-pink-500 font-sans uppercase font-semibold">
@@ -142,7 +142,7 @@ const App = () => {
             {activeId ? <Item id={activeId} isDragging /> : null}
           </DragOverlay>
         </DndContext>
-      </Card>
+      </div>
     </div>
   );
 };
